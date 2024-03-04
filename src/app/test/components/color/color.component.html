@@ -1,0 +1,23 @@
+<p>Color component</p>
+<div style="margin: 1rem;">
+  <button (click)="onCreateColor()">Create color</button>
+</div>
+<div style="margin: 1rem;">
+  <label style="margin-right: 1rem;">
+    <input type="radio" name="color" (change)="selectedColor = 'red'" value="red">
+    Red (cause error)
+  </label>
+  <label style="margin-right: 1rem;">
+    <input type="radio" name="color" (change)="selectedColor = 'green'" value="green">
+    Green
+  </label>
+  <label style="margin-right: 1rem;">
+    <input type="radio" name="color" (change)="selectedColor = 'blue'" value="blue">
+    Blue
+  </label>
+</div>
+
+<div style="margin: 1rem;">
+  current state is: 
+  {{state$ | async | json}}  
+</div>
